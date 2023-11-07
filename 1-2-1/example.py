@@ -21,8 +21,12 @@ def drawTriangle(long, x, y):
 
 x = 100
 y = 100
+length = 43
 for tri in range(100):
-    drawTriangle()
+    drawTriangle(length, x, y)
+    x += length * 1.25
+    y += length * 1.25
+    length += 1
 
 
 wn = trtl.Screen()
