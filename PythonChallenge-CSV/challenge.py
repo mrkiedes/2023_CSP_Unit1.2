@@ -22,7 +22,10 @@ Good luck - you have the period!
 '''
 
 # Initial set of CSV values
-values ="KingsIndian,QueensGambit,TheColle,TheFrench,TheFriedLiver,TheFourKnights"
+csv ="KingsIndian,QueensGambit,TheColle,TheFrench,TheFriedLiver,TheFourKnights"
+index = 0
+myValues = []
+
 
 #Do Part 1 of the challenge below here
 
