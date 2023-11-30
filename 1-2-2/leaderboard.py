@@ -61,14 +61,13 @@ def get_scores(file_name):
 def update_leaderboard(file_name, leader_names, leader_scores, player_name, player_score):
     index = 0
     # TODO 8: loop through all the scores in the existing leaderboard list
-    '''
-    for   :
+    for index in range(len(leader_scores)):
       # TODO 9: check if this is the position to insert new score at
-      if ():
+      if (player_score > leader_scores[index]):
         break
       else:
         index = index + 1
-    '''
+
 
     # TODO 10: insert new player and score
 
