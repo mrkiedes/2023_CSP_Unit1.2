@@ -34,7 +34,7 @@ def draw_spiral():
     for wall in range (25):
         maze_painter.left(90)
 
-        maze_painter.forward(wall_length + wall_increment - 10 - door_width * 2)
+        maze_painter.forward(wall_length + wall_increment)
         wall_increment += 10
     maze_painter.hideturtle()
 
