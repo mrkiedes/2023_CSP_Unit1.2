@@ -12,27 +12,25 @@ maze_painter.pencolor(wall_color)
 maze_painter.speed("fastest")
 
 def drawSpiral():
-    # Draw Sprial
     wall_len = path_width
     for w in range(num_sides):
         wall_len += path_width
 
         if (w > 4):
+            # Initial turn for painter to be in the correct direction
             maze_painter.left(90)
 
+            # Draw the door
             draw_door()
 
+            # Draw the barrier
             draw_barrier()
 
-            # a common error for the student to make is not to
-            # subtract the parts of the wall that are already drawn
-            # (this is not seen as a problem here,
-            # but becomes apparent in the next version when
-            # walls may be rendererd too long/wide)
+            # Remember: you have to subtract the amount you drew for the wall and
+            # barrier to avoid making the walls bigger.
             maze_painter.forward(wall_len - 10 - path_width - 40)
 
 def draw_door():
-    # draw door
     maze_painter.forward(10)
     maze_painter.penup()
     maze_painter.forward(path_width * 2)
