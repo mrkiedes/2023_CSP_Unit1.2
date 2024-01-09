@@ -9,6 +9,7 @@ pear_image = "pear.gif"
 wn = trtl.Screen()
 drawer = trtl.Turtle()
 
+letter = "a"
 wn.setup(width=1.0, height=1.0)
 wn.addshape(apple_image)  # Make the screen aware of the new file
 wn.addshape(pear_image)  # Make the screen aware of the new file
@@ -35,6 +36,7 @@ def drawLetter(active_apple, letter):
     drawer.write(letter, font=("Arial", 55, "bold"))
 
 def reset_apple(active_apple):
+    global letter
     if letter_list:
         letter = rand.choice(letter_list)
         letter_list.remove(letter)
@@ -49,10 +51,57 @@ def drop_apple():
     wn.tracer(False)
     reset_apple(apple)
 
+def checkA():
+    #if current letter is a then drop the apple
+    global letter
+    if letter == "a":
+        drop_apple()
+
+def checkA():
+    #if current letter is a then drop the apple
+    global letter
+    if letter == "a":
+        drop_apple()
+def checkB():
+    #if current letter is a then drop the apple
+    global letter
+    if letter == "b":
+        drop_apple()
+
+
+
 
 # -----function calls-----
 draw_apple(apple, "A")
-wn.onkeypress(drop_apple, "a")
+wn.onkeypress(checkA, "a")
+wn.onkeypress(checkB, "b")
+wn.onkeypress(checkC, "c")
+wn.onkeypress(checkD, "d")
+wn.onkeypress(checkE, "e")
+wn.onkeypress(checkF, "f")
+wn.onkeypress(checkG, "g")
+wn.onkeypress(checkH, "h")
+wn.onkeypress(checkI, "i")
+wn.onkeypress(checkJ, "j")
+wn.onkeypress(checkK, "k")
+wn.onkeypress(checkL, "l")
+wn.onkeypress(checkM, "m")
+wn.onkeypress(checkN, "n")
+wn.onkeypress(checkO, "o")
+wn.onkeypress(checkP, "p")
+wn.onkeypress(checkQ, "q")
+wn.onkeypress(checkR, "r")
+wn.onkeypress(checkS, "s")
+wn.onkeypress(checkT, "t")
+wn.onkeypress(checkU, "u")
+wn.onkeypress(checkV, "v")
+wn.onkeypress(checkW, "w")
+wn.onkeypress(checkX, "x")
+wn.onkeypress(checkY, "y")
+wn.onkeypress(checkZ, "z")
+
+
+
 
 wn.listen()
 wn.bgpic("background.gif")

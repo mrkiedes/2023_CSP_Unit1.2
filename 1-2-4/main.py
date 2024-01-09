@@ -1,4 +1,5 @@
 import turtle as trtl
+import random as rand
 
 # maze configuration variables
 num_sides = 25
@@ -17,14 +18,20 @@ def drawSpiral():
         wall_len += path_width
 
         if (w > 4):
+            randomNum = rand.randint(0,1)
             # Initial turn for painter to be in the correct direction
             maze_painter.left(90)
 
-            # Draw the door
-            draw_door()
-
-            # Draw the barrier
-            draw_barrier()
+            if randomNum == 1:
+                # Draw the door
+                draw_door()
+                # Draw the barrier
+                draw_barrier()
+            else:
+                # Draw the barrier
+                draw_barrier()
+                # Draw the door
+                draw_door()
 
             # Remember: you have to subtract the amount you drew for the wall and
             # barrier to avoid making the walls bigger.
